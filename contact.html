@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Initially hide all input boxes */
+        .input-box {
+            display: none;
+        }
+
+        /* Adjust the background color of the sticky navbar as needed */
+        .main-header.sticky {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body id="contact" onload="disableButton(true)">
+    <!-- Container to wrap everything -->
+    <div id="container">
+        <!-- Website Brand -->
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <img src="logo.png" alt="Great Cliffs logo" width="125">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Cliffs</li>
+                                <li><a href="activities.html">Activities</a></li>
+                                <li class="active"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main>
+            <h1>Contacting Us</h1>
+            <!-- Rest of your content... -->
+
+            <!-- Bootstrap button with Font Awesome icon -->
+            <div class="button mt-3">
+                <button type="submit" class="btn btn-primary" id="submit">
+                    <i class="fa fa-paper-plane mr-2"></i>Inquire
+                </button>
+            </div>
+            <!-- End Bootstrap button -->
+
+            <!-- Partners Section -->
+            <section>
+                <ul id="partners" class="list-unstyled">
+                    <li class="partner"><img src="partners/partner-bustour.png" alt="Parnter Bus Tours"></li>
+                    <li class="partner"><img src="partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
+                    <li class="partner"><img src="partners/partner-campingadv.png" alt="Partner Camping Adventure"></li>
+                    <li class="partner d-md-none"><img src="partners/partner-collegetours.png" alt="Partner College Tours"></li>
+                    <li class="partner d-md-none"><img src="partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
+                    <li class="partner d-md-none"><img src="partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+                    <li class="partner d-lg-none"><img src="partners/partner-collegetours.png" alt="Partner College Tours"></li>
+                    <li class="partner d-lg-none"><img src="partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
+                    <li class="partner d-lg-none"><img src="partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+                    <!-- Add similar code for other partners -->
+                </ul>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <div id="nondisclaimer">
+                <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+            </div>
+            <div id="disclaimer">
+                <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- End Container -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Function to make the top navigation bar sticky
+        window.onscroll = function() {
+            stickyNavbar()
+        };
+
+        var header = document.querySelector(".main-header");
+        var sticky = header.offsetTop;
+
+        function stickyNavbar() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
